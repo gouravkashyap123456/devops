@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Get Employee Information</title>
+    <style>
+        body {
+            background-color: lightgrey;
+            font-family: Avenir, sans-serif;
+            color: black;
+            text-align: center;
+        }
+        h1 {
+            color: DodgerBlue;
+        }
+        h2 {
+            color: grey;
+        }
+        button {
+            height: 45px;
+            width: 200px;
+            font-style: oblique;
+            margin: 10px;
+        }
+        .fetch-info {
+            background: grey;
+            color: white;
+        }
+        .update-db {
+            background: white;
+            color: black;
+        }
+        input {
+            height: 25px;
+            font-size: 14pt;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Employee Information</h1>
+    <form action="http://0.0.0.0:80/fetchdata" autocomplete="on" method="POST">
+        <h2>Enter Employee ID</h2>
+        Employee ID:
+        <input type="number" name="emp_id" autofocus size="40">
+
+        <div>
+            <button type="submit" class="fetch-info">FETCH INFO</button>
+            <button type="submit" formaction="http://0.0.0.0:80/" class="update-db" method="GET">GO TO UPDATE DATABASE PAGE</button>
+        </div>
+    </form>
+</body>
+</html>

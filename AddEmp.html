@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Employee Information</title>
+    <style>
+        body {
+            background-color: lightgrey;
+            font-family: Avenir, sans-serif;
+            color: black;
+            text-align: center;
+        }
+        h1 {
+            color: DodgerBlue;
+        }
+        button {
+            background: grey;
+            height: 45px;
+            width: 200px;
+            color: white;
+            font-style: oblique;
+            margin: 10px;
+        }
+        input {
+            height: 25px;
+            font-size: 14pt;
+            color: grey;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Employee Database</h1>
+    <form action="http://0.0.0.0:80/addemp" autocomplete="on" method="POST" enctype="multipart/form-data">
+        <button type="submit" formaction="http://0.0.0.0:80/getemp">GET EMPLOYEE INFORMATION</button>
+        <button type="submit" formaction="http://0.0.0.0:80/getemp">ABOUT US</button>
+
+        <div>
+            Employee ID:
+            <input type="number" name="emp_id" autofocus size="40">
+        </div>
+        <div>
+            First Name:
+            <input type="text" name="first_name">
+        </div>
+        <div>
+            Last Name:
+            <input type="text" name="last_name">
+        </div>
+        <div>
+            Primary Skills:
+            <input type="text" name="pri_skill">
+        </div>
+        <div>
+            Location:
+            <input type="text" name="location">
+        </div>
+        <div>
+            Image:
+            <input type="file" name="emp_image_file">
+        </div>
+        <button type="submit">UPDATE DATABASE</button>
+    </form>
+</body>
+</html>
